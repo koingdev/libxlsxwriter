@@ -1749,9 +1749,10 @@ lxw_workbook_assemble_xml_file(lxw_workbook *self)
  * Create a new workbook object.
  */
 lxw_workbook *
-workbook_new(const char *filename)
+workbook_new(const char *filename, const char *directory)
 {
-    return workbook_new_opt(filename, NULL);
+    lxw_workbook_options options = {LXW_TRUE, directory, LXW_FALSE, NULL, NULL};
+    return workbook_new_opt(filename, &options);
 }
 
 /* Deprecated function name for backwards compatibility. */

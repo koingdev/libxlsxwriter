@@ -374,7 +374,7 @@ extern "C" {
  * extension or Excel will generate a warning when opening the file.
  *
  */
-lxw_workbook *workbook_new(const char *filename);
+lxw_workbook *workbook_new(const char *filename, const char *directory);
 
 /**
  * @brief Create a new workbook object, and set the workbook options.
