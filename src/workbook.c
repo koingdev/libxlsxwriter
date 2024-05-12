@@ -2185,7 +2185,7 @@ workbook_close(lxw_workbook *self)
     if (packager == NULL) {
         LXW_PRINTF(LXW_STDERR "[ERROR] workbook_close(): "
                    "Error creating '%s'. "
-                   "System error = %s\n", self->filename, strerror(errno));
+                   "System error = %s\n", self->options.tmpdir, strerror(errno));
 
         error = LXW_ERROR_CREATING_XLSX_FILE;
         goto mem_error;
