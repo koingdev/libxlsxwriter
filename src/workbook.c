@@ -2179,7 +2179,7 @@ workbook_close(lxw_workbook *self)
     /* Create a packager object to assemble sub-elements into a zip file. */
     packager = lxw_packager_new(self->filename,
                                 self->options.tmpdir,
-                                self->options.use_zip64);
+                                NULL);
 
     /* If the packager fails it is generally due to a zip permission error. */
     if (packager == NULL) {
